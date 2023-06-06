@@ -1,6 +1,8 @@
 // write your code here
 document.addEventListener('DOMContentLoaded', () => {
 
+
+
     fetch('http://localhost:3000/ramens')
         .then(resp => resp.json())
         .then(result => {
@@ -34,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+
+
     const form = document.querySelector('#new-ramen')
     form.addEventListener('submit', newRamen)
 
@@ -64,77 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify(newR)
         })
 
+
         form.reset()
+
+
     }
+
+
+
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // write your code here
-// document.addEventListener('DOMContentLoaded', () => {
-
-
-//     fetch('http://localhost:3000/ramens')
-//     .then(resp => resp.json())
-//     .then(data => ramenEat(data))
-    
-// function ramenEat(data){
-// const ramenMenu = document.getElementById('ramen-menu')
-// const form=document.getElementById('new-ramen')
-
-// data.forEach(ramen => {
-//     const ramenImg = document.createElement('img')
-// ramenImg.src = ramen.image
-// ramenMenu.append(ramenImg)
-
-// ramenImg.addEventListener('click', ()=>{
-
-//     document.querySelector('img.detail-image').src = ramenImg.src
-//     document.querySelector('h2.name').innerText= ramen.name
-//   document.querySelector('h3.restaurant').innerText= ramen.restaurant
-//    document.querySelector('#rating-display').textContent = ramen.rating
-//      document.querySelector('#comment-display').textContent = ramen.comment
-
-
-// })
-
-// })
-
-// form.addEventListener('submit', (e)=>{
-// e.preventDefault()
-// document.querySelector('h2.name').innerText=form.querySelector('#new-name').value
-// document.querySelector('h3.restaurant').innerText= form.querySelector('#new-restaurant').value
-// document.querySelector('img.detail-image').src =  form.querySelector('#new-image').value
-// document.querySelector('#rating-display').textContent = form.querySelector('#new-rating').value
-// document.querySelector('#comment-display').textContent = form.querySelector('#new-comment').value
-
-
-// })
-
-
-// }
-
-// })
